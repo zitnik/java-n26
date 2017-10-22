@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="java-n26:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_n26_jar</output-path>
+    <root id="root">
+      <element id="archive" name="java-n26.jar">
+        <element id="module-output" name="java-n26" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+      <element id="library" level="project" name="Maven: org.json:json:20170516" />
+    </root>
+  </artifact>
+</component>
