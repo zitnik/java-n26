@@ -88,7 +88,8 @@ public class N26Cli {
 	void mainMenu(){
 		int selection = Integer.valueOf(readLine("Available actions:\n" +
 				"1: account info\n" +
-				"2: make transfer"));
+				"2: make transfer\n" +
+				"3: exit"));
 
 		switch (selection){
 			case 1:
@@ -97,6 +98,8 @@ public class N26Cli {
 			case 2:
 				makeTransferMenu();
 				break;
+			case 3:
+				System.exit(0);
 			default:
 				System.out.println("Invalid selection");
 				mainMenu();
@@ -135,7 +138,7 @@ public class N26Cli {
 				do{
 					iban = readLine("IBAN?");
 					iban = iban.replaceAll("[ \\.-]+","");
-				}while(!iban.matches("[a-zA-Z]{2}[0-9]{20}"));
+				}while(!iban.matches("[a-zA-Z]{2}[0-9]{17}"));
 
 				checkIbanAndTransfer(name, iban);
 				break;
