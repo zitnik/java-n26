@@ -134,11 +134,7 @@ public class N26Cli {
 				if(name.length() > 70)
 					name = name.substring(0,70);
 
-				String iban;
-				do{
-					iban = readLine("IBAN?");
-					iban = iban.replaceAll("[ \\.-]+","");
-				}while(!iban.matches("[a-zA-Z]{2}[0-9]{17}"));
+				String iban = readLine("IBAN?").replaceAll("[ \\.-]+","");
 
 				checkIbanAndTransfer(name, iban);
 				break;
